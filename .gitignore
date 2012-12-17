@@ -1,0 +1,6 @@
+
+#
+# We don't care about Chef's cache.
+#
+cache
+
