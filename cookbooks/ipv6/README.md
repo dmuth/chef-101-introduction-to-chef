@@ -2,7 +2,8 @@
 Chef IPv6 Recipes
 =================
 
-These are the recipes that I use to set up IPv6 on my Linode box running Ubuntu 12.04 LTS.
+These are the recipes that I use to set up IPv6 on my Linode box 
+running Ubuntu 12.04 LTS.
 
 To try it out, use this command
 
