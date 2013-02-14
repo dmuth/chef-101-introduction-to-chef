@@ -1,0 +1,40 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+auto eth0
+iface eth0 inet dhcp
+	#
+	# The :1 address is just for testing and stuff
+	#
+	up /sbin/ip -6 addr add <%= @network %>1/<%= @network_len %> dev eth0
+	down /sbin/ip -6 addr del <%= @network %>1/<%= @network_len %> dev eth0
+	#
+	# My webservers start with ::100 and go up from there
+	#
+	up /sbin/ip -6 addr add <%= @network %>100/<%= @network_len %> dev eth0
+	down /sbin/ip -6 addr del <%= @network %>100/<%= @network_len %> dev eth0
+	up /sbin/ip -6 addr add <%= @network %>101/<%= @network_len %> dev eth0
+	down /sbin/ip -6 addr del <%= @network %>101/<%= @network_len %> dev eth0
+	up /sbin/ip -6 addr add <%= @network %>102/<%= @network_len %> dev eth0
+	down /sbin/ip -6 addr del <%= @network %>102/<%= @network_len %> dev eth0
+	up /sbin/ip -6 addr add <%= @network %>103/<%= @network_len %> dev eth0
+	down /sbin/ip -6 addr del <%= @network %>103/<%= @network_len %> dev eth0
+	up /sbin/ip -6 addr add <%= @network %>104/<%= @network_len %> dev eth0
+	down /sbin/ip -6 addr del <%= @network %>105/<%= @network_len %> dev eth0
+	up /sbin/ip -6 addr add <%= @network %>105/<%= @network_len %> dev eth0
+	down /sbin/ip -6 addr del <%= @network %>105/<%= @network_len %> dev eth0
+	up /sbin/ip -6 addr add <%= @network %>106/<%= @network_len %> dev eth0
+	down /sbin/ip -6 addr del <%= @network %>106/<%= @network_len %> dev eth0
+	up /sbin/ip -6 addr add <%= @network %>107/<%= @network_len %> dev eth0
+	down /sbin/ip -6 addr del <%= @network %>107/<%= @network_len %> dev eth0
+	up /sbin/ip -6 addr add <%= @network %>108/<%= @network_len %> dev eth0
+	down /sbin/ip -6 addr del <%= @network %>108/<%= @network_len %> dev eth0
+	up /sbin/ip -6 addr add <%= @network %>109/<%= @network_len %> dev eth0
+	down /sbin/ip -6 addr del <%= @network %>109/<%= @network_len %> dev eth0
+
+
