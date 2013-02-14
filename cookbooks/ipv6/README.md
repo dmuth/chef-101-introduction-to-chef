@@ -1,4 +1,3 @@
-
 Chef IPv6 Recipes
 =================
 
@@ -25,5 +24,11 @@ Note that you'll have to bring the network interface down and back up
 for the changes to take effect. I *strongly* recommend you do this from the
 console in case something goes wrong.
 
+Further Info
+------------
+
+For further info on setting up IPv6, I wrote a blog post about it:
+
+http://www.dmuth.org/node/1407/setting-ipv6-linode-nginx
 
 
